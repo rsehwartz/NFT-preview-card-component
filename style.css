@@ -1,0 +1,107 @@
+:root {
+    /*Primary colors*/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /*Neutral*/
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /*spacing*/
+    --row-gap: 18px;
+}
+
+body {
+    align-items: center;    
+    background: var(--main-BG);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    font-family: "Outfit";
+    font-weight: 300;
+    height: 100vh;
+    justify-content: center;
+}
+
+.card {
+    background: var(--card-BG);
+    border-radius: 15px;
+    padding: 1.3rem;
+    max-width: 280px;
+}
+
+.card__image, .card__header, .card__content,.card__detail{
+    margin-bottom: var(--row-gap);
+}
+
+.card__header a {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.card__image {
+    position: relative;
+}
+
+.card__image--main{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card__content h3 {
+    color: var(--soft-blue);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card__detail {
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--row-gap);
+}
+
+.card__price, .card__expiration {
+    align-items: center;
+    display: flex;
+}
+
+.card__price img, .card__expiration img{
+    margin-right: 8px;
+}
+
+.card__author {
+    align-items: center;
+    color: var(--soft-blue);
+    display: flex;
+    margin-top: var(--row-gap);
+}
+
+.card__author a{
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.card__author img {
+    align-self: center;
+    border-radius: 50px;
+    border: 1px solid var(--white);
+    margin-right: 18px;
+    width: 30px;
+}
+
+.card__price {
+    color: var(--cyan);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card__header a:hover, .card__author a:hover {
+    color: var(--cyan);
+}
